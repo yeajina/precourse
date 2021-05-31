@@ -76,3 +76,8 @@ function addTogetherTwoStrings(string1, string2); {
     var result = string1 + string2;
     return result;
 }
+
+var resultStringa = addTogetherTwoStrings("Lap", "top");
+console.log('should be Laptop:', resultStringa);
+var resultStringb = addTogetherTwoStrings("I", "pad");
+console.log('should be Ipad:', resultStringb);
