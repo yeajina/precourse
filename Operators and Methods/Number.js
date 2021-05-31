@@ -275,3 +275,68 @@ var FloatUserId = Number.parseFloat("29.45");
 console.log("FloatUserId:", FloatUserId);
 
 
+// 14. Random number (Math.random())
+// Math.random() will generate a number between 0 and 1; The number generated can be 0, but will not be 1
+
+function generateRandomNumber(min, max) {
+    var result = Math.random() * (max - min) + min;
+    return result;
+}
+
+var resultRandomNumber = generateRandomNumber(1, 10);
+console.log('resultRandomNumber:', resultRandomNumber);
+
+//example-random number between two specific values
+var randomBetween1And10 = Math.random() * (10 - 1) + 1;
+console.log('randomBetween1And10:', randomBetween1And10);
+//example-variables whose values are numbers
+var min = 90;
+var max = 100;
+var randomBetween90And100 = Math.random() * (max - min) + min;
+console.log('randomBetween90And100:', randomBetween90And100);
+
+
+// 15. Greater than (>) and Greater than or equal to (>=)
+function applyGreaterThan(num1, num2); {
+    var result = num1 > num2;
+    return result;
+}
+
+var trueGreaterThanResult = applyGreaterThan(101, 10);
+console.log('should be true:', trueGreaterThanResult);
+var falseGreaterThanResult = applyGreaterThan(-13, 2);
+console.log('should be false:', falseGreaterThanResult);
+
+//example-operator(>, >=)
+var exclusiveLowerBound = 7;
+console.log('actual is greater than lower bound:', 9 > exclusiveLowerBound);
+var inclusiveLowerBound = 5;
+console.log('actual is greater than or equal to inclusive lower bound:', 5 >= inclusiveLowerBound);
+//example-variables whose values are numbers
+var numberOfEnvelopesPurchased = 430;
+var numberofEnvelopesNeeded = 350;
+var acquiredSufficientEnvelopes = numberOfEnvelopesPurchased >= numberofEnvelopesNeeded;
+console.log("acquiredSufficientEnvelopes:", acquiredSufficientEnvelopes);
+
+
+// 16. Less than (<) and Less than or equal to (<=)
+function applyLessThanOrEqualTo(num1, num2); {
+    var result = num1 <= num2;
+    return result;
+}
+
+var trueLessThanOrEqualToResult = applyLessThanOrEqualTo(11, 110);
+console.log('should be true:', trueLessThanOrEqualToResult);
+var falseLessThanOrEqualToResult = applyLessThanOrEqualTo(-13, -21);
+console.log('should be false:', falseLessThanOrEqualTo);
+
+//example-operator(<, <=)
+var exclusiveUpperBound = 17;
+console.log('actual is less than exclusive upper bound:', 9 < exclusiveUpperBound);
+var inclusiveUpperBound = 51;
+console.log('actual is less than or equal to inclusive upper bound:', 51 <= inclusiveUpperBound);
+//example-variables whose values are numbers
+var fuelNeeded = 27;
+var fuelCapacity = 30;
+var canMakeTripWithoutStopping = fuelNeeded <= fuelCapacity;
+console.log('canMakeTripWithoutStopping:', canMakeTripWithoutStopping);
