@@ -109,6 +109,7 @@ console.log("should log 'We will go dancing on Tuesday.'", resultMessage2);
 
 
 // 6. Length of String (.length)
+
 var lengthOfName = "Alan Turing".length;
 console.log('legnthOfName version 1:', lengthOfName);
 
@@ -176,4 +177,50 @@ console.log('should log "ueu":', resultSubString1);
 var string2 = 'Stack Trace';
 var resultSubString2 = applySubString(string2, 2, 10); //grabs only 2-9
 console.log('should log "ack Trac":', resultSubString2);
+
+
+// 9. Getting a portion of String (.indexOf())
+
+// looks for substring based on "first found"
+var indexOfSubString1 = "Google".indexOf('oog');
+console.log('index where substring is found:', indexOfSubString1);
+
+var indexOfSubString2 = "In defense of one's principles".indexOf('e';)
+console.log('index where substring is found:', indexOfSubString2);
+
+// looks for substring after a certain index
+var indexOfSubString = "In defense of one's principles".indexOf('e', 7);
+console.log('index where substring is found, after a certain point in string:', indexOfSubString);
+
+// if substring not found, call to indexOf() will return -1
+var indexOfSubStringNotPresent = "Oceanic".indexOf('xyz');
+console.log('index if substring is not present:', indexOfSubStringNotPresent);
+
+//examples:
+var DNAStrand = "ATGCGCTAA";
+var stopCodon = "TAA";
+var indexOfStopCodon = DNAStrand.indexOf(stopCodon);
+console.log('index where stop codon is found with gene sequence:', indexOfStopCodon);
+
+var DNAStrand = "ATGCGCTAACATCGCAGCTAGTTAAGCGATTGCAT";
+var stopCodon = "TAA";
+var indexOfFirstStopCodon = DNAStrand.indexOf(stopCodon);
+var indexofSecondStopCodon = DNAStrand.indexOf(stopCodon, indexOfFirstStopCodon + 1); // +1 to look for substring again after the first Codon is located
+console.log('index where second codon is found with gene sequence:', indexofSecondStopCodon);
+
+function applyIndexOf(string, subString) {
+    var index = string.indexOf(subString);
+    return index;
+}
+
+var string1 = "Quicksort";
+var subString1 = "sort";
+var resultIndex1 = applyIndexOf(string1, subString1);
+console.log('should be 5:', resultIndex1);
+
+var string2 = "size,color,cut,price";
+var subString2 = "cut";
+var resultIndex2 = applyIndexOf(string2, subString2);
+console.log('should be 11:', resultIndex2);
+
 
