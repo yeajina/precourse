@@ -224,3 +224,62 @@ var resultIndex2 = applyIndexOf(string2, subString2);
 console.log('should be 11:', resultIndex2);
 
 
+// 10. Turning value into string (.toString())
+    // other methods exist, json.stringify()
+
+var num = 17;
+var stringNum = num.toString()
+console.log('stringNum:', stringNum);
+console.log('type of stringNum:', typeof stringNum);
+
+var bool = true;
+var stringBool = bool.toString();
+console.log('stringBool:', stringBool);
+console.log('typd of stringBool:', typeof stringBool);
+
+function applyToString(param); {
+    var stringVersion = param.toString();
+    return stringVersion;
+}
+
+var input1 = 9300;
+var resultString1 = applytoString(input1);
+console.log('should log 9300:', resultString1);
+console.log('type should be string:', typeof resultString1);
+
+var input2 = true;
+var resultString2 = applytoString(input2);
+console.log('should log true:', resultString2);
+console.log ('type should be string:', type of resultString2);
+
+
+// 11. Escape Characters
+    // Apostrophe - wrapped in single quotes (''); to include more apostrophes in string use (\')
+    // Newline symbol - alters behavior of string when it is printed out (\n)
+
+//Escaping apostrophe
+console.log('sample:', 'It/'s raining');
+
+//Newline symbol
+console.log('multiline string:', 'First Line\nSecond Line\nThird Line')
+
+//with variables
+var message = 'That is Jubal\'s Mother \'s favorite, isn\'t it?'
+console.log('message containing escaped apostrophes:', message);
+
+'That is Jina\'s Mother\'s favorite, isn\'t it?'
+
+var haiku = 'An old silent pond... \nA frog jumps into the pond,\nsplash! Silence again.';
+console.log('A haiku from Matsuo Basho:\n', haiku);
+console.log('A haiku from Matsuo Basho:\n' + haiku); // will get rid of indent in the first line
+
+fucntion generateHaiku(firstLine, secondLine, thirdLine) {
+    var haiku = firstLine + '\n' + secondLine + '\n' + thirdLine;
+    return haiku;
+}
+
+var resultHaiku1 = generateHaiku('In the twilight rain', 'these brilliant-hued hibiscus -', 'A lovely sunset.');
+console.log('should log formatted haiku:\n', resultHaiku1);
+
+var resultHaiku2 = generateHaiku('The lamp once out', 'Moves west, flowers\' shadows', 'Creep eastward.');
+console.log('should also log formatted haiku:\n', resultHaiku2);
