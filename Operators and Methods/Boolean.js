@@ -43,7 +43,6 @@ function bothAreTrue(bool_1,bool_2); {
 
 var outputTrue = bothAreTrue(true, true);
 console.log('should be true:', outputTrue);
-
 var outputFalse = bothAreTrue(true, false);
 console.log('should be false:', outputFalse);
 //example
@@ -138,3 +137,4 @@ var nextString = 'sadness';
 var stringsDoNotMatch = currentString !== nextString;
 console.log('stringsDoNotMatch:', stringsDoNotMatch);
 
+console.log("Testing git hub commit & push");
